@@ -10,6 +10,10 @@ register to your Satellite.
 For this example, set the following environment variables, and run
 `make`.
 
-OSPASSWD : the root pw for the target image
-RHUSER   : the Red Hat portal user ID
-RHPASSWD : the Red Hat portal password
+* `OSPASSWD` : the root pw for the target image
+* `RHUSER`   : the Red Hat portal user ID
+* `RHPASSWD` : the Red Hat portal password
+
+Feel free to submit PRs or Issues.
+
+AG
