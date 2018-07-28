@@ -3,8 +3,8 @@ all: rhel7.vhd
 rhel7.qcow2: rhel-server-7.5-x86_64-kvm.qcow2
 	cp $< $@ 
 	virt-customize -a $@ \
-		--root-password password:$OSPASSWD \
-		--run-command 'subscription-manager register --force --username $RHUSER --password $RHPASSWD --auto-attach' \
+		--root-password password:$(OSPASSWD) \
+		--run-command 'subscription-manager register --force --username $(RHUSER) --password $(RHPASSWD) --auto-attach' \
 		--run-command 'subscription-manager repos --disable=\*' \
 		--run-command 'subscription-manager repos --enable=rhel-7-server-rpms --enable=rhel-7-server-extras-rpms' \
 		--run-command 'yum -y remove cloud-init' \
